@@ -1,0 +1,58 @@
+import { Diamond } from "./Diamond";
+
+export const Diamonds: Diamond[] = [
+  {
+    id: 1,
+    shape: "Round",
+    size: 1.02,
+    color: "D",
+    clarity: "IF",
+    price: 15000,
+    listPrice: 18000,
+  },
+  {
+    id: 2,
+    shape: "Pear",
+    size: 1.5,
+    color: "E",
+    clarity: "VVS1",
+    price: 20000,
+    listPrice: 21000,
+  },
+  {
+    id: 3,
+    shape: "Emerald",
+    size: 0.95,
+    color: "G",
+    clarity: "VVS2",
+    price: 12000,
+    listPrice: 10000,
+  },
+  {
+    id: 4,
+    shape: "Round",
+    size: 2.15,
+    color: "F",
+    clarity: "I2",
+    price: 50000,
+    listPrice: 55000,
+  },
+  {
+    id: 5,
+    shape: "Emerald",
+    size: 0.5,
+    color: "D",
+    clarity: "IF",
+    price: 2000,
+    listPrice: 3000,
+  },
+  {
+    id: 6,
+    shape: "Pear",
+    size: 1.2,
+    color: "G",
+    clarity: "I1",
+    price: 15000,
+    listPrice: 12000,
+  },
+];
