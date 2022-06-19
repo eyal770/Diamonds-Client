@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { diamond } from '../diamond';
-import { Diamonds } from '../mock-diamonds';
+import { MockDiamonds } from '../mock-diamonds';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GetDiamondsService {
+export class DiamondsService {
 
   constructor() { }
 
   public GetDiamonds(): diamond[] {
-    return Diamonds;
+    return MockDiamonds;
   }
 }
