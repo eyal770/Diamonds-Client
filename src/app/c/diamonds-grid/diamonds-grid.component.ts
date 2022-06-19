@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { diamond } from 'src/app/diamond';
-import { MockDiamonds } from 'src/app/mock-diamonds';
 import { DiamondsService } from 'src/app/s/diamonds.service';
+import { Component, OnInit } from '@angular/core';
+import { Diamond } from 'src/app/diamond';
 
 @Component({
   selector: 'app-diamonds-grid',
@@ -10,17 +9,23 @@ import { DiamondsService } from 'src/app/s/diamonds.service';
 })
 export class DiamondsGridComponent implements OnInit {
 
-  diamonds!: diamond[];
+  diamonds!: Diamond[];
   constructor(private diamondsService: DiamondsService) {
 
-    this.diamonds = this.diamondsService.GetDiamonds();
 
   }
 
   ngOnInit() {
-
+    this.getDiamonds();
   }
-
+  getDiamonds(): void {
+    this.diamondsService.GetDiamonds()
+      .subscribe(
+        (diamonds) => {
+          this.diamonds = diamonds;
+        }
+      );
+  }
   // getDiamonds(): void {
   //   this.diamonds = MockDiamonds;
   // }

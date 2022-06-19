@@ -1,4 +1,4 @@
-export interface diamond {
+export interface Diamond {
     id: number;
     shape: string;
     size: number;

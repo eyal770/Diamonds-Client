@@ -1,6 +1,6 @@
-import { diamond } from "./diamond";
+import { Diamond } from "./diamond";
 
-export const MockDiamonds: diamond[] = [
+export const MockDiamonds: Diamond[] = [
   {
     id: 1,
     shape: "Round",
