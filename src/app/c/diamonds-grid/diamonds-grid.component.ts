@@ -1,5 +1,4 @@
-import { DiamondsService } from 'src/app/s/diamonds.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Diamond } from 'src/app/diamond';
 
 @Component({
@@ -7,27 +6,10 @@ import { Diamond } from 'src/app/diamond';
   templateUrl: './diamonds-grid.component.html',
   styleUrls: ['./diamonds-grid.component.css']
 })
-export class DiamondsGridComponent implements OnInit {
 
-  diamonds!: Diamond[];
-  constructor(private diamondsService: DiamondsService) {
+export class DiamondsGridComponent {
+  @Input() diamonds!: Diamond[];
 
-
-  }
-
-  ngOnInit() {
-    this.getDiamonds();
-  }
-  getDiamonds(): void {
-    this.diamondsService.GetDiamonds()
-      .subscribe(
-        (diamonds) => {
-          this.diamonds = diamonds;
-        }
-      );
-  }
-  // getDiamonds(): void {
-  //   this.diamonds = MockDiamonds;
-  // }
+  constructor() {  }
 
 }
