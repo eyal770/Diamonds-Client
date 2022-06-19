@@ -1,0 +1,29 @@
+<div class="container mt-5">
+
+    <h2>Diamonds Grid</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>shape</th>
+                <th>size</th>
+                <th>color</th>
+                <th>clarity</th>
+                <th>price</th>
+                <th>listPrice</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of diamonds">
+                <td>{{ d.shape }}</td>
+                <td>{{ d.size}}</td>
+                <td>{{ d.color }}</td>
+                <td>{{ d.clarity }}</td>
+                <td>{{ d.price }}</td>
+                <td>{{ d.listPrice }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
