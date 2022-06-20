@@ -1,6 +1,7 @@
 import { Diamond } from './../../diamond';
 import { Component, OnInit } from '@angular/core';
 import { DiamondsService } from 'src/app/s/diamonds.service';
+import { CommonService } from 'src/app/s/CommonService.service';
 
 
 
@@ -18,7 +19,7 @@ export class AddDiamondComponent implements OnInit {
   price!: number;
   listPrice!: number;
 
-  constructor(private diamondsService: DiamondsService) { }
+  constructor(private diamondsService: DiamondsService, private commonService: CommonService) { }
 
   ngOnInit() {
   }
@@ -51,9 +52,8 @@ export class AddDiamondComponent implements OnInit {
 
     this.diamondsService
       .addDiamond(this.diamondToAdd)
-      .subscribe(
-        diamond =>
-          console.log(diamond.id));
+      .subscribe(diamond => this.commonService.sendUpdate(diamond));
+
   }
 
 
