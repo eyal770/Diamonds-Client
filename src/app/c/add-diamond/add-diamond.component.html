@@ -1,38 +1,38 @@
-<!-- <div class="card">
-    <div class="card-body"> -->
+<div class="card">
+    <div class="card-body">
 
-<h2>Add diamond</h2>
+        <h4>Add diamond</h4>
 
-<form dir="ltr" #eventForm="ngForm">
+        <form dir="ltr" #eventForm="ngForm">
 
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>shape</th>
-                <th>size</th>
-                <th>color</th>
-                <th>clarity</th>
-                <th>price</th>
-                <th>listPrice</th>
+            <table class="table table-striped">
+                <!-- <thead>
+                    <tr>
+                        <th>shape</th>
+                        <th>size</th>
+                        <th>color</th>
+                        <th>clarity</th>
+                        <th>price</th>
+                        <th>listPrice</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> <input type="text" class="form-control" placeholder="shape" name="shape" required [(ngModel)]="shape"></td>
-                <td> <input type="text" class="form-control" placeholder="size" name="size" required [(ngModel)]="size"></td>
-                <td> <input type="text" class="form-control" placeholder="color" name="color" required [(ngModel)]="color"></td>
-                <td> <input type="text" class="form-control" placeholder="clarity" name="clarity" required [(ngModel)]="clarity"></td>
-                <td> <input type="text" class="form-control" placeholder="price" name="price" id="price" required [(ngModel)]="price"></td>
-                <td> <input type="text" class="form-control" placeholder="listPrice" name="listPrice" required [(ngModel)]="listPrice"></td>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                        <td> <input type="text" class="form-control" placeholder="shape" name="shape" required [(ngModel)]="shape"></td>
+                        <td> <input type="text" class="form-control" placeholder="size" name="size" required [(ngModel)]="size"></td>
+                        <td> <input type="text" class="form-control" placeholder="color" name="color" required [(ngModel)]="color"></td>
+                        <td> <input type="text" class="form-control" placeholder="clarity" name="clarity" required [(ngModel)]="clarity"></td>
+                        <td> <input type="text" class="form-control" placeholder="price" name="price" id="price" required [(ngModel)]="price"></td>
+                        <td> <input type="text" class="form-control" placeholder="listPrice" name="listPrice" required [(ngModel)]="listPrice"></td>
 
-            </tr>
-        </tbody>
-    </table>
+                    </tr>
+                </tbody>
+            </table>
 
-    <button type="submit" class="btn btn-primary" (click)="validateAddDiamond()" id="AddDiamond" [disabled]="!eventForm.form.valid">Add Diamond</button>
-    <!-- <h6> eventForm.form.valid:{{eventForm.form.valid}}</h6> -->
-</form>
-<!-- </div>
-</div> -->
+            <button type="submit" class="btn btn-primary" (click)="validateAddDiamond()" id="AddDiamond" [disabled]="!eventForm.form.valid">Add Diamond</button>
+            <!-- <h6> eventForm.form.valid:{{eventForm.form.valid}}</h6> -->
+        </form>
+    </div>
+</div>
