@@ -1,5 +1,5 @@
 export interface Diamond {
-    id: number;
+    id?: number;
     shape: string;
     size: number;
     color: string;
@@ -7,3 +7,6 @@ export interface Diamond {
     price: number;
     listPrice: number;
 }
+
+
+

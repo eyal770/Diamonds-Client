@@ -10,7 +10,7 @@ export class DiamondStatisticsComponent implements AfterViewChecked {
   @Input() diamonds!: Diamond[];
 
   numOfDiamonds!: number;
-  averagePrice!: number;
+  averagePrice!: string;
   averageDiscount!: string;
   minPrice!: any;
 
@@ -18,8 +18,7 @@ export class DiamondStatisticsComponent implements AfterViewChecked {
 
     this.minPrice = Math.min(...this.diamonds.map(d => d.price))
     this.numOfDiamonds = this.diamonds.length;
-    this.averagePrice = this.diamonds.reduce((prev, curr) => prev + curr.price, 0) / this.diamonds.length;
+    this.averagePrice = (this.diamonds.reduce((prev, curr) => prev + curr.price, 0) / this.diamonds.length).toFixed(2);
     this.averageDiscount = (this.diamonds.reduce((prev, curr) => prev + curr.listPrice - curr.price, 0) / this.diamonds.length).toFixed(2);
-
   }
 }
